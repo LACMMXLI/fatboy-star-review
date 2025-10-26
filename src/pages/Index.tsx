@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StarRating } from "@/components/StarRating";
 import { PrivateFeedback } from "@/components/PrivateFeedback";
+import fatboyLogo from "@/assets/fatboy-logo.png";
 
 const GOOGLE_PLACE_ID = "ChIJi0vnrExx14ARCFbYG3xvPqo";
 
@@ -30,9 +31,11 @@ const Index = () => {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 md:p-8">
       <div className="w-full max-w-2xl mx-auto text-center">
         <div className="mb-12 animate-in fade-in slide-in-from-top-4 duration-700">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-3">
-            Fatboy Restaurant
-          </h1>
+          <img 
+            src={fatboyLogo} 
+            alt="Fatboy Restaurant Logo" 
+            className="w-64 md:w-80 mx-auto mb-6"
+          />
           <p className="text-sm md:text-base text-muted-foreground">
             Gracias por tu calificación
           </p>
