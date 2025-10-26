@@ -30,7 +30,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 md:p-8">
-      <Card className="w-full max-w-2xl mx-auto text-center shadow-2xl border-2 border-border p-8 md:p-12 bg-card">
+      <Card className="w-full max-w-2xl mx-auto text-center shadow-2xl border-[3px] border-accent p-8 md:p-12 bg-card">
         <div className="mb-12 animate-in fade-in slide-in-from-top-4 duration-700">
           <img 
             src={fatboyLogo} 
@@ -42,9 +42,13 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+        <div className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
           <StarRating onRatingSelect={handleRatingSelect} />
         </div>
+
+        <p className="text-sm text-foreground mb-8 px-4">
+          Gracias por calificarnos. Tu opinión nos ayuda a seguir mejorando y ofreciendo la mejor experiencia Fatboy.
+        </p>
 
         {showFeedback && selectedRating && (
           <PrivateFeedback rating={selectedRating} onClose={handleCloseFeedback} />
