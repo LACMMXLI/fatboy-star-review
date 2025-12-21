@@ -29,7 +29,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 md:p-8">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 md:p-8 relative">
       <Card className="w-full max-w-2xl mx-auto text-center shadow-2xl border-[3px] border-accent p-8 md:p-12 bg-card">
         <div className="mb-12 animate-in fade-in slide-in-from-top-4 duration-700">
           <img 
@@ -54,6 +54,16 @@ const Index = () => {
           <PrivateFeedback rating={selectedRating} onClose={handleCloseFeedback} />
         )}
       </Card>
+
+      {/* Google Logo */}
+      <div className="fixed bottom-4 right-4 flex items-center gap-1.5 opacity-70">
+        <span className="text-xs text-muted-foreground">Powered by</span>
+        <img 
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+          alt="Google" 
+          className="h-4"
+        />
+      </div>
     </div>
   );
 };
